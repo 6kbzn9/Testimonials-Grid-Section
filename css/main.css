@@ -32,13 +32,45 @@ h2 {
 }
 
 .wrapper {
-  width: clamp(280px, 90%, 1115px);
+  width: clamp(280px, 90%, 1100px);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
+  -webkit-column-gap: 2.325rem;
+          column-gap: 2.325rem;
+  row-gap: 1.75rem;
       grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+}
+
+@media (max-width: 1140px) and (max-width: 1140px) {
+  .wrapper {
+    width: clamp(280px, 90%, 850px);
+    padding: 5rem 0;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "daniel daniel jonathan" "jeanette patrick patrick" "kira kira kira";
+  }
+}
+
+@media (max-width: 850px) and (max-width: 850px) {
+  .wrapper {
+    width: clamp(280px, 90%, 600px);
+    padding: 5rem 0;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "daniel daniel" "jonathan jeanette" "patrick patrick" "kira kira";
+  }
+}
+
+@media (max-width: 850px) and (max-width: 630px) {
+  .wrapper {
+    width: clamp(280px, 90%, 360px);
+    padding: 5rem 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "daniel" "jonathan" "jeanette" "patrick" "kira";
+  }
 }
 
 .card {
@@ -86,6 +118,8 @@ h2 {
 .card.kira, .card.jeanette {
   background-color: white;
   color: #48556a;
+  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile {

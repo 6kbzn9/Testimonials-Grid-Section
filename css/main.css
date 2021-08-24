@@ -37,8 +37,7 @@ h2 {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2.25rem;
-  margin: auto;
+  grid-gap: 2rem;
       grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
 }
 
@@ -96,9 +95,9 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .profile img {
